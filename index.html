@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kelompok~1~ Graph App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Graph Library -->
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+
+<body>
+
+<!-- OPENING -->
+<div id="opening">
+  <h1 class="logo">Kelompok~1~ 🚀</h1>
+  <p>Graph Visualizer</p>
+  <button onclick="startApp()">MASUK</button>
+</div>
+
+<!-- AUDIO GLOBAL -->
+<audio id="bgm" loop></audio>
+
+<!-- APP -->
+<div id="app">
+  <h2>Graph Builder</h2>
+
+  <input type="number" id="nodes" placeholder="Jumlah Node">
+  <button onclick="initGraph()">Buat Graph</button>
+
+  <h3>Tambah Edge</h3>
+  <input type="number" id="from" placeholder="Dari">
+  <input type="number" id="to" placeholder="Ke">
+  <input type="number" id="weight" placeholder="Bobot">
+  <button onclick="addEdge()">Tambah</button>
+
+  <h3>Adjacency Matrix</h3>
+  <div id="matrix"></div>
+
+  <h3>Visual Graph</h3>
+  <div id="network"></div>
+
+  <h3>Algoritma</h3>
+  <button onclick="bfs()">BFS</button>
+  <button onclick="dfs()">DFS</button>
+  <button onclick="mst()">MST</button>
+</div>
+
+<script src="kel1.js"></script>
+</body>
+</html>
